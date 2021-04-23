@@ -1,0 +1,24 @@
+<a class="back" (click)="goBack()" #back>
+  <svg class="icon icon-back">
+    <use href="./assets/icons.svg#icon-chevron-small-left"></use>
+  </svg>
+</a>
+<div
+  #image
+  [ngClass]="animationElement"
+  class="info-image"
+  [ngStyle]="(ui.getOpenState() | async) === 'closed' && { display: 'none' }"
+>
+  <img src="{{ property?.propertyImageUrl }}" alt="" />
+</div>
+<div class="property-info" #info [ngClass]="animationElement">
+  <h4 class="heading-4">{{ property.propertyAddress }}</h4>
+  <span class="type">{{ property.propertyShortDescription }}</span>
+  <div class="more">
+    <span>{{ property.propertyLongDescription }}  </span>
+  </div>
+  <span class="price">{{ property.price | currency:'PLN':'code'}} </span>
+</div>
+
+<button class="call" #call (click)="onNavigate('/contact')">Zamów dietę</button>
+

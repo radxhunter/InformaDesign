@@ -1,0 +1,57 @@
+<div class="main">
+  <header class="header">
+    <ul class="menu" #menu>
+    </ul>
+    <ul class="menu menu-right" #menuSecond>
+    </ul>
+  </header>
+  <section class="first-section">
+    <div class="info">
+      <h1 class="heading-1">
+        Duży wybór diet pudełkowych dobranych przez wykwalifikowanych specjalistów.
+      </h1>
+      <p class="paragraph">
+        Gotujemy z pasją, mając na uwadze świadome odzywianie i zdrowy styl życia. Kochamy to co robimy i wiemy, że jest
+        to widoczne w naszych daniach.
+      </p>
+      <a class="btn--start" (click)="onNavigate('/listings')">
+        <button type="button" class="btn btn-secondary">Zobacz MENU</button>     
+      </a>
+    </div>
+    <div class="visuals">
+      <div class="image-container">
+        <img #imageFirst src="../../../assets/images/landing/dish1.jpeg" alt="" />
+      </div>
+      <div class="image-container">
+        <img #imageSecond src="../../../assets/InForma_id/InForma_id/SM/fb_profilowe.png"  alt="" />
+      </div>
+    </div>
+  </section>
+  <section class="second-section" #secondSection>
+    <div class="box"></div>
+    <h4 class="heading-4" id="about">O nas</h4>
+    <h1 class="heading-1" id="buy">Z nami możesz więcej!</h1>
+    <div class="info-1">
+      <div class="info-1__text">
+        <span class="quote">
+          Dowóz na terenie całego śląska GRATIS<br/>
+          Ceny już od 39zł
+        </span>
+        <h2 class="heading-3">
+          W cenie:
+        </h2>
+        <p class="paragraph">
+          <li>Konsultacje i porady dietetyczne</li>
+          <li>Konsultacje treningowe</li>
+          <li>Dostawa</li>
+        </p>
+        <a class="btn--learn" (click)="onNavigate('/contact')">
+        <button type="button" class="btn btn-secondary">Skontaktuj się z nami</button> 
+        </a>
+      </div>
+      <div class="info-1__visual">
+        <img src="../../../assets/images/landing/chef3.jpg"  alt="">
+      </div>
+    </div>
+  </section>
+</div>
